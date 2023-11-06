@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./Home";
+import Abbos from "./Abbos";
+import './style.css';
+import { useState } from "react";
+import Work  from "./Work";
 
 function App() {
+  const [num, setNum] = useState(0);
+  const [abbos, setAbbos] = useState('Ulmasbaev');
+  const [text, setText] = useState("Hello World!");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+      <h1>{num}</h1>
+   
+
+      {/* <Abbos text={text} abbos={abbos} setAbbos={setAbbos}/> */}
+      {/* <Home text={text} setText={setText}/> */}
+      <Work num={num} setNum={setNum}/>
+
+     {/* <h1> Hello World</h1>
+      
+      <Home />
+      <Abbos/> */}
     </div>
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
